@@ -6,18 +6,29 @@ Este é um guia completo e detalhado para criar aplicativos React Native para An
 
 ---
 
+## 🖥️ Escolha Seu Sistema Operacional
+
+**Este guia tem versões específicas para Windows e Linux!**
+
+- 🪟 **Windows:** Use os arquivos sem sufixo (ex: `00-instalacao-ferramentas.md`)
+- 🐧 **Linux:** Use os arquivos com sufixo `-linux` (ex: `00-instalacao-ferramentas-linux.md`)
+
+Os documentos `03-estrutura-projeto.md` e `06-desenvolvimento.md` são **iguais para ambos** os sistemas operacionais.
+
+---
+
 ## 📑 Índice dos Documentos
 
 Siga os documentos nesta ordem:
 
 ### 🔧 Fase 1: Preparação (Fazer uma vez)
 
-1. **[00-alternativas-instalacao.md](./00-alternativas-instalacao.md)**
+1. **[00-alternativas-instalacao.md](./spec/00-alternativas-instalacao.md)** | **[Linux](./spec/00-alternativas-instalacao-linux.md)**
    - Entenda as diferenças entre usar Android Studio ou não
    - Escolha qual método usar
    - **Você escolheu: SDK Command Line Tools (método leve)**
 
-2. **[00-instalacao-ferramentas.md](./00-instalacao-ferramentas.md)** ⭐ **COMECE AQUI**
+2. **[00-instalacao-ferramentas.md](./spec/00-instalacao-ferramentas.md)** | **[Linux](./spec/00-instalacao-ferramentas-linux.md)** ⭐ **COMECE AQUI**
    - Instalar Node.js
    - Instalar Java JDK
    - Instalar Android SDK Command Line Tools
@@ -25,14 +36,14 @@ Siga os documentos nesta ordem:
    - Preparar celular Android
    - ⏱️ Tempo: 30-60 minutos
 
-3. **[01-introducao.md](./01-introducao.md)**
+3. **[01-introducao.md](./spec/01-introducao.md)**
    - O que é React Native
    - Visão geral do guia
    - Pré-requisitos adicionais
 
 ### 🚀 Fase 2: Criando o Projeto
 
-4. **[02-criando-projeto.md](./02-criando-projeto.md)**
+4. **[02-criando-projeto.md](./spec/02-criando-projeto.md)** | **[Linux](./spec/02-criando-projeto-linux.md)**
    - Comando para criar o projeto
    - Opções de versão
    - Estrutura inicial
@@ -41,14 +52,14 @@ Siga os documentos nesta ordem:
 
 ### 📖 Fase 3: Entendendo o Projeto
 
-5. **[03-estrutura-projeto.md](./03-estrutura-projeto.md)**
+5. **[03-estrutura-projeto.md](./spec/03-estrutura-projeto.md)** *(igual para Windows e Linux)*
    - Entender pastas e arquivos
    - Onde você vai programar
    - Arquivos de configuração
    - Como organizar o código
    - ⏱️ Tempo de leitura: 15 minutos
 
-6. **[04-configuracao-android.md](./04-configuracao-android.md)**
+6. **[04-configuracao-android.md](./spec/04-configuracao-android.md)** | **[Linux](./spec/04-configuracao-android-linux.md)**
    - Configurar Gradle
    - Otimizar para PC lento
    - Adicionar permissões
@@ -58,7 +69,7 @@ Siga os documentos nesta ordem:
 
 ### 🎮 Fase 4: Executando e Desenvolvendo
 
-7. **[05-executando-app.md](./05-executando-app.md)** ⭐ **MOMENTO MÁGICO**
+7. **[05-executando-app.md](./spec/05-executando-app.md)** | **[Linux](./spec/05-executando-app-linux.md)** ⭐ **MOMENTO MÁGICO**
    - Executar o app no celular
    - Testar Fast Refresh
    - Menu de desenvolvimento
@@ -66,7 +77,7 @@ Siga os documentos nesta ordem:
    - Solução de problemas
    - ⏱️ Tempo: 10-30 minutos (primeira compilação)
 
-8. **[06-desenvolvimento.md](./06-desenvolvimento.md)**
+8. **[06-desenvolvimento.md](./spec/06-desenvolvimento.md)** *(igual para Windows e Linux)*
    - Componentes básicos (View, Text, Button, etc.)
    - Estilização com StyleSheet
    - Estados (useState)
@@ -78,7 +89,7 @@ Siga os documentos nesta ordem:
 
 ### 📦 Fase 5: Distribuindo o App
 
-9. **[07-build-apk.md](./07-build-apk.md)**
+9. **[07-build-apk.md](./spec/07-build-apk.md)** | **[Linux](./spec/07-build-apk-linux.md)**
    - Gerar APK Debug (rápido)
    - Gerar APK Release (otimizado)
    - Criar keystore
@@ -90,7 +101,7 @@ Siga os documentos nesta ordem:
 
 ### 📝 Referência Rápida
 
-10. **[08-resumo-completo.md](./08-resumo-completo.md)** ⭐ **GUIA DE REFERÊNCIA**
+10. **[08-resumo-completo.md](./spec/08-resumo-completo.md)** | **[Linux](./spec/08-resumo-completo-linux.md)** ⭐ **GUIA DE REFERÊNCIA**
     - Todos os comandos em um só lugar
     - Checklist completo
     - Solução rápida de problemas
@@ -135,27 +146,30 @@ Siga os documentos nesta ordem:
 
 ### Se você é TOTALMENTE NOVO:
 
-1. Leia **00-instalacao-ferramentas.md**
-2. Instale tudo passo a passo
-3. Vá para **02-criando-projeto.md**
-4. Continue na ordem até **05-executando-app.md**
-5. Quando o app rodar no celular, comemore! 🎉
-6. Leia **06-desenvolvimento.md** conforme precisar
-7. Use **08-resumo-completo.md** como referência
+1. **Escolha seu SO:** Windows ou Linux
+2. Leia **00-instalacao-ferramentas.md** (ou `-linux.md`)
+3. Instale tudo passo a passo
+4. Vá para **02-criando-projeto.md** (ou `-linux.md`)
+5. Continue na ordem até **05-executando-app.md** (ou `-linux.md`)
+6. Quando o app rodar no celular, comemore! 🎉
+7. Leia **06-desenvolvimento.md** conforme precisar (igual para ambos)
+8. Use **08-resumo-completo.md** (ou `-linux.md`) como referência
 
 ### Se você JÁ TEM experiência com programação:
 
-1. Leia **00-instalacao-ferramentas.md** (instale as ferramentas)
-2. Pule para **08-resumo-completo.md** (referência rápida)
-3. Crie o projeto: `npx react-native init MeuApp`
-4. Execute: `npm run android`
-5. Consulte os outros documentos quando precisar
+1. **Escolha seu SO:** Windows ou Linux
+2. Leia **00-instalacao-ferramentas.md** (ou `-linux.md`) e instale as ferramentas
+3. Pule para **08-resumo-completo.md** (ou `-linux.md`) para referência rápida
+4. Crie o projeto: `npx react-native init MeuApp`
+5. Execute: `npm run android` (Windows) ou `npm run android` após `chmod +x android/gradlew` (Linux)
+6. Consulte os outros documentos quando precisar
 
 ### Se você ESTÁ VOLTANDO depois de um tempo:
 
-1. Vá direto para **08-resumo-completo.md**
-2. Use como cola para comandos
-3. Consulte documentos específicos se esquecer algo
+1. **Escolha seu SO:** Windows ou Linux
+2. Vá direto para **08-resumo-completo.md** (ou `-linux.md`)
+3. Use como cola para comandos
+4. Consulte documentos específicos se esquecer algo
 
 ---
 
@@ -206,19 +220,19 @@ Siga os documentos nesta ordem:
 ## 🆘 Precisa de Ajuda?
 
 ### Erro durante instalação?
-→ Consulte **00-instalacao-ferramentas.md** seção "Solução de Problemas"
+→ Consulte **00-instalacao-ferramentas.md** (ou `-linux.md`) seção "Solução de Problemas"
 
 ### Erro ao criar projeto?
-→ Consulte **02-criando-projeto.md** seção "Solução de Problemas"
+→ Consulte **02-criando-projeto.md** (ou `-linux.md`) seção "Solução de Problemas"
 
 ### App não compila?
-→ Consulte **05-executando-app.md** seção "Solução de Problemas"
+→ Consulte **05-executando-app.md** (ou `-linux.md`) seção "Solução de Problemas"
 
 ### Não sabe como fazer algo?
-→ Consulte **06-desenvolvimento.md** ou **08-resumo-completo.md**
+→ Consulte **06-desenvolvimento.md** ou **08-resumo-completo.md** (ou `-linux.md`)
 
 ### Erro ao gerar APK?
-→ Consulte **07-build-apk.md** seção "Solução de Problemas"
+→ Consulte **07-build-apk.md** (ou `-linux.md`) seção "Solução de Problemas"
 
 ---
 
@@ -296,9 +310,24 @@ Boa sorte e bons estudos! 🚀
 - **Criado:** Novembro 2024
 - **Foco:** React Native para Android sem Android Studio
 - **Nível:** Iniciante a Intermediário
-- **Plataforma:** Windows 10/11
+- **Plataformas:** Windows 10/11 e Linux (Ubuntu/Debian)
 - **Idioma:** Português (Brasil)
 - **Objetivo:** Ensinar de forma prática e detalhada
 
 **Última atualização:** Novembro 2024
+
+---
+
+## 🐧 Desenvolvendo no Linux
+
+Este guia agora inclui **versões completas para Linux**! Se você usa Linux, aproveite os benefícios:
+
+- ✅ **Builds 20-30% mais rápidos** que Windows
+- ✅ **Menos problemas com permissões de arquivo**
+- ✅ **Terminal bash/zsh mais poderoso**
+- ✅ **ADB funciona melhor "out of the box"**
+- ✅ **File watching mais eficiente**
+- ✅ **Scripts de automação mais fáceis**
+
+Siga os documentos com sufixo `-linux` para instruções específicas!
 
