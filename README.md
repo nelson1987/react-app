@@ -1,97 +1,221 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# NativeApp - React Native Application
 
-# Getting Started
+> Aplicativo React Native multiplataforma desenvolvido com TypeScript, suportando Android e iOS.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 📋 Overview do Projeto
 
-## Step 1: Start Metro
+Este é um projeto **React Native** moderno, criado com `@react-native-community/cli` e configurado com TypeScript. O aplicativo utiliza as melhores práticas de desenvolvimento mobile e está otimizado para desenvolvimento com **Cursor AI**.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### 🎯 Características Principais
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- **React Native 0.82.1** - Framework para desenvolvimento mobile cross-platform
+- **React 19.1.1** - Biblioteca UI mais recente
+- **TypeScript 5.8.3** - Tipagem estática para maior segurança e produtividade
+- **Safe Area Context** - Gerenciamento inteligente de áreas seguras (notch, status bar, etc)
+- **ESLint & Prettier** - Código consistente e padronizado
+- **Jest** - Framework de testes unitários completo
+- **Metro Bundler** - Bundler otimizado para React Native
 
-```sh
-# Using npm
-npm start
+### 📦 Estrutura do Projeto
 
-# OR using Yarn
-yarn start
+```
+react-app/
+├── android/              # Código nativo Android (Kotlin)
+├── ios/                  # Código nativo iOS (Swift)
+├── __tests__/           # Testes automatizados
+├── spec/                # Documentação detalhada do projeto
+├── App.tsx              # Componente raiz da aplicação
+├── index.js             # Entry point da aplicação
+├── package.json         # Dependências e scripts
+├── tsconfig.json        # Configuração TypeScript
+├── babel.config.js      # Configuração Babel
+├── metro.config.js      # Configuração Metro Bundler
+└── jest.config.js       # Configuração de testes
 ```
 
-## Step 2: Build and run your app
+### 🛠️ Stack Tecnológica
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+| Tecnologia | Versão | Propósito |
+|-----------|--------|-----------|
+| Node.js | ≥20 | Runtime JavaScript |
+| React Native | 0.82.1 | Framework mobile |
+| React | 19.1.1 | Biblioteca UI |
+| TypeScript | 5.8.3 | Tipagem estática |
+| Kotlin | - | Código nativo Android |
+| Swift | - | Código nativo iOS |
+
+## 🚀 Começando
+
+### Pré-requisitos
+
+Certifique-se de ter o ambiente configurado corretamente:
+
+- **Node.js** ≥20
+- **JDK 17** (para Android)
+- **Android Studio** (para desenvolvimento Android)
+- **Xcode** (para desenvolvimento iOS - apenas macOS)
+- **CocoaPods** (para dependências iOS)
+
+> **Nota**: Consulte o [guia de configuração de ambiente](https://reactnative.dev/docs/set-up-your-environment) oficial para instruções detalhadas.
+
+### 📚 Documentação Completa
+
+Este projeto possui documentação detalhada na pasta `spec/`:
+
+- **Windows**: Guias de instalação e configuração
+- **Linux**: Versões específicas para ambiente Linux
+- Tópicos incluem: instalação, criação de projeto, estrutura, configuração Android, execução, desenvolvimento e build
+
+### Instalação
+
+1. **Clone o repositório**
+
+```bash
+git clone <url-do-repositorio>
+cd react-app
+```
+
+2. **Instale as dependências**
+
+```bash
+npm install
+```
+
+3. **Configure iOS (apenas macOS)**
+
+```bash
+# Instalar bundler Ruby (primeira vez apenas)
+bundle install
+
+# Instalar pods
+cd ios && bundle exec pod install && cd ..
+```
+
+## 🎮 Scripts Disponíveis
+
+### Desenvolvimento
+
+```bash
+# Iniciar Metro Bundler
+npm start
+
+# Executar no Android
+npm run android
+
+# Executar no iOS
+npm run ios
+
+# Executar testes
+npm test
+
+# Lint do código
+npm run lint
+```
+
+### Build de Produção
+
+Consulte a documentação em `spec/07-build-apk.md` para instruções detalhadas sobre geração de APK/AAB para produção.
+
+## 🔧 Desenvolvimento
+
+### Fast Refresh
+
+O projeto está configurado com **Fast Refresh**, permitindo que alterações no código sejam refletidas instantaneamente no aplicativo sem perder o estado.
+
+### Reload Manual
+
+- **Android**: <kbd>R</kbd> duas vezes ou <kbd>Ctrl</kbd> + <kbd>M</kbd> → Reload
+- **iOS**: <kbd>Cmd ⌘</kbd> + <kbd>R</kbd>
+
+### Debug Menu
+
+- **Android**: <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) ou <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS)
+- **iOS**: <kbd>Cmd ⌘</kbd> + <kbd>D</kbd>
+
+## 🧪 Testes
+
+```bash
+# Executar todos os testes
+npm test
+
+# Executar testes em modo watch
+npm test -- --watch
+
+# Gerar coverage
+npm test -- --coverage
+```
+
+## 📝 Estrutura do App.tsx
+
+O componente principal utiliza:
+
+- **SafeAreaProvider**: Gerenciamento de áreas seguras
+- **useColorScheme**: Detecção de tema claro/escuro
+- **StatusBar**: Customização da barra de status
+- **NewAppScreen**: Template inicial do React Native
+
+## 🔐 Configurações de Segurança
 
 ### Android
 
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
+- Keystore de debug incluído para desenvolvimento
+- ProGuard configurado para builds de release
+- Permissões declaradas no `AndroidManifest.xml`
 
 ### iOS
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+- Privacy Info configurado (`PrivacyInfo.xcprivacy`)
+- Configurações de segurança no `Info.plist`
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+## 🤖 Desenvolvimento com Cursor AI
 
-```sh
-bundle install
+Este projeto está otimizado para uso com o Cursor AI:
+
+- `.gitignore` configurado para ignorar arquivos específicos do Cursor
+- Estrutura de código limpa e bem documentada
+- TypeScript para melhor autocompleção e sugestões da IA
+- Comentários JSDoc quando necessário
+
+## 🐛 Troubleshooting
+
+### Problemas Comuns
+
+**Metro Bundler não inicia:**
+```bash
+npx react-native start --reset-cache
 ```
 
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
+**Erro de build no Android:**
+```bash
+cd android && ./gradlew clean && cd ..
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+**Erro de pods no iOS:**
+```bash
+cd ios && bundle exec pod deintegrate && bundle exec pod install && cd ..
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+**Erro de permissões:**
+```bash
+# Linux/Mac
+chmod +x android/gradlew
+```
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## 📖 Recursos Adicionais
 
-## Step 3: Modify your app
+- [React Native Documentation](https://reactnative.dev)
+- [React Native Community](https://github.com/react-native-community)
+- [TypeScript Documentation](https://www.typescriptlang.org)
+- [React Documentation](https://react.dev)
 
-Now that you have successfully run the app, let's make changes!
+## 📄 Licença
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+Este projeto é privado.
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+## 👥 Contribuindo
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+Consulte os guias na pasta `spec/` para convenções de código e melhores práticas.
 
-## Congratulations! :tada:
+---
 
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**Desenvolvido com ❤️ usando React Native e Cursor AI**

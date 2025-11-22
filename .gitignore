@@ -1,9 +1,14 @@
+# ========================================
 # OSX
-#
+# ========================================
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
 
-# Xcode
-#
+# ========================================
+# Xcode / iOS
+# ========================================
 build/
 *.pbxuser
 !default.pbxuser
@@ -21,9 +26,15 @@ DerivedData
 *.ipa
 *.xcuserstate
 **/.xcode.env.local
+project.xcworkspace
 
+# iOS Simulator
+*.dSYM.zip
+*.dSYM
+
+# ========================================
 # Android/IntelliJ
-#
+# ========================================
 build/
 .idea
 .gradle
@@ -35,16 +46,54 @@ local.properties
 !debug.keystore
 .kotlin/
 
-# node.js
-#
-node_modules/
-npm-debug.log
-yarn-error.log
+# Android specific
+*.apk
+*.ap_
+*.aab
+output.json
 
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
-# screenshots whenever they are needed.
+# Gradle files
+.gradle/
+gradle-app.setting
+
+# ========================================
+# Node.js / NPM / Yarn
+# ========================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Package managers
+.npm
+.yarn-integrity
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# ========================================
+# React Native
+# ========================================
+# Bundle artifacts
+*.jsbundle
+
+# Temporary files created by Metro to check the health of the file watcher
+.metro-health-check*
+
+# React Native Debugger
+.vscode/launch.json
+
+# ========================================
+# Fastlane
+# ========================================
+# It is recommended to not store the screenshots in the git repo.
+# Instead, use fastlane to re-generate them whenever needed.
 # For more information about the recommended setup visit:
 # https://docs.fastlane.tools/best-practices/source-control/
 
@@ -53,23 +102,200 @@ yarn-error.log
 **/fastlane/screenshots
 **/fastlane/test_output
 
-# Bundle artifact
-*.jsbundle
-
+# ========================================
 # Ruby / CocoaPods
+# ========================================
 **/Pods/
 /vendor/bundle/
+.bundle/
 
-# Temporary files created by Metro to check the health of the file watcher
-.metro-health-check*
-
-# testing
+# ========================================
+# Testing / Coverage
+# ========================================
 /coverage
+*.coverage
+.nyc_output
+*.lcov
 
-# Yarn
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+# ========================================
+# Environment Variables
+# ========================================
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.*.local
+
+# ========================================
+# IDEs and Editors
+# ========================================
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Cursor AI
+.cursor/
+.cursorrules
+*.cursor-*
+
+# WebStorm / IntelliJ
+.idea/
+*.iws
+out/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# ========================================
+# Logs
+# ========================================
+*.log
+logs
+*.log.*
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# ========================================
+# OS Generated files
+# ========================================
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+.nfs*
+
+# ========================================
+# Temporary files
+# ========================================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~.nib
+*.bak
+*.cache
+
+# ========================================
+# Build outputs
+# ========================================
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# ========================================
+# Misc
+# ========================================
+.cache/
+*.orig
+*.rej
+.eslintcache
+.stylelintcache
+.prettierignore
+
+# TypeScript
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# dotenv environment variable files
+.env.test.local
+.env.production.local
+.env.backup
+
+# parcel-bundler cache (https://parceljs.org/)
+.parcel-cache
+
+# Next.js build output
+.next
+out
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+# Comment in the public line in if your project uses Gatsby and not Next.js
+# public
+
+# Storybook build outputs
+.out
+.storybook-out
+storybook-static
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# Expo
+.expo/
+.expo-shared/
+
+# Ignite CLI
+.ignite/
+
+# ========================================
+# Project Specific
+# ========================================
+# Add any project-specific ignores here
