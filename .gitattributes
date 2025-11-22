@@ -1,0 +1,44 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Force LF for specific files (common in cross-platform projects)
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# iOS specific files should always use LF
+*.pbxproj text eol=lf
+*.xcscheme text eol=lf
+.xcode.env text eol=lf
+
+# Android specific files
+*.gradle text eol=lf
+*.properties text eol=lf
+gradlew text eol=lf
+
+# React Native config files
+babel.config.js text eol=lf
+metro.config.js text eol=lf
+jest.config.js text eol=lf
+
+# Shell scripts should use LF
+*.sh text eol=lf
+
+# Windows specific files should use CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.jar binary
+*.keystore binary
+
