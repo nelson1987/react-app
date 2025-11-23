@@ -8,12 +8,12 @@ Este é um projeto React Native puro, configurado com TypeScript e as melhores p
 
 ## 🚀 Tecnologias
 
-- **React Native** 0.76.9
-- **React** 18.3.1
-- **TypeScript** 5.8.3
+- **React Native** 0.74.5 (versão estável)
+- **React** 18.2.0
+- **TypeScript** 5.0.4
 - **Jest** para testes
 - **ESLint** para qualidade de código
-- **Metro Bundler** para bundling
+- **Metro Bundler** 0.80.12 para bundling
 
 ## 📱 Estrutura do Projeto
 
@@ -170,21 +170,7 @@ New-NetFirewallRule -DisplayName "Metro Bundler" -Direction Inbound -Action Allo
 
 ## 🐛 Troubleshooting
 
-### Metro não inicia (Erro: Cannot read properties of undefined 'handle')
-
-Este é um problema conhecido com a versão React Native 0.76.9 e o Metro Bundler. Soluções:
-
-**Opção 1: Usar versão estável anterior**
-```bash
-npm install react-native@0.74.0 --save
-rm -rf node_modules package-lock.json
-npm install
-```
-
-**Opção 2: Aguardar próxima versão**
-React Native 0.76.x ainda está em fase de estabilização. Recomenda-se usar 0.74.x para produção.
-
-### Metro não inicia (geral)
+### Metro não inicia
 
 ```bash
 # Limpar cache
@@ -218,4 +204,4 @@ Projeto React Native desenvolvido com foco em performance, qualidade de código 
 
 **Versão**: 0.0.1  
 **Node**: >=20  
-**React Native**: 0.76.9
+**React Native**: 0.74.5 (estável)
