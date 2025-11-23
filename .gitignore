@@ -299,3 +299,14 @@ storybook-static
 # Project Specific
 # ========================================
 # Add any project-specific ignores here
+
+# Android SDK local configuration (WSL/Windows specific)
+android/local.properties
+
+# Android device IP (for WiFi debugging)
+.android-device-ip
+android-device-ip.txt
+
+# Setup scripts (user-specific)
+*.ps1
+setup-*.sh
